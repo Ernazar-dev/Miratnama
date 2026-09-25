@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="kaa">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf6ee">
+  <meta name="description" content="Neke toyına shaqırıw">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="kaa_UZ">
+  <meta property="og:title" content="Toyǵa shaqırıw">
+  <meta property="og:description" content="Baxıtlı kúnimizdi birge atap ótiwge shaqıramız.">
+  <title>Toyǵa shaqırıw</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="is-locked">
+  <div class="silk-bg" aria-hidden="true"></div>
+  <div class="wedding-glow" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="atmosphere" id="atmosphere" aria-hidden="true"></div>
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="ring-gold" x1="0" y1="0" x2="1" y2="1">
+        <stop stop-color="#8d662e"/><stop offset=".3" stop-color="#e7ca83"/><stop offset=".5" stop-color="#fff2bd"/><stop offset=".72" stop-color="#b58a42"/><stop offset="1" stop-color="#e1bf75"/>
+      </linearGradient>
+      <symbol id="wedding-rings" viewBox="0 0 160 110">
+        <g fill="none" stroke="url(#ring-gold)" stroke-width="5">
+          <ellipse cx="61" cy="65" rx="31" ry="33" transform="rotate(-24 61 65)"/>
+          <ellipse cx="99" cy="65" rx="31" ry="33" transform="rotate(24 99 65)"/>
+        </g>
+        <g fill="none" stroke="#fff7d8" stroke-width="1" opacity=".85">
+          <path d="M35 63C34 48 43 36 57 34M105 35C121 39 130 52 128 67"/>
+        </g>
+        <path d="M91 30L86 20L94 12L104 12L112 20L107 30Z" fill="#fff9e9" stroke="url(#ring-gold)" stroke-width="1.5"/>
+        <path d="M86 20H112M94 12L92 20L99 30L106 20L104 12" fill="none" stroke="#c5a36a" stroke-width="1"/>
+        <path class="ring-sparkle" d="M137 22V36M130 29H144M22 37V47M17 42H27" stroke="#c6a464" stroke-width="1.3" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="botanical" viewBox="0 0 180 300">
+        <g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M88 289C71 231 102 183 78 124S69 52 105 12M83 220C52 205 30 177 24 150M85 184C120 160 133 138 145 105M78 125C44 104 32 81 36 53M81 79C109 65 124 48 129 26"/>
+          <path d="M81 251C49 248 44 227 47 213C66 219 81 231 81 251ZM81 222C104 215 120 197 115 181C94 188 83 204 81 222ZM52 196C27 196 12 183 9 167C31 169 46 179 52 196ZM32 169C43 150 39 131 27 122C20 140 22 157 32 169ZM86 176C66 170 55 152 59 136C77 143 86 157 86 176ZM113 156C113 133 124 120 139 119C136 139 128 150 113 156ZM132 128C151 128 164 114 167 98C145 101 137 113 132 128ZM66 115C42 122 25 108 21 94C41 93 56 101 66 115ZM39 82C53 64 51 46 42 35C33 51 33 69 39 82ZM79 78C66 57 72 40 81 32C89 49 88 64 79 78ZM108 61C129 64 144 51 149 39C130 36 116 46 108 61ZM94 29C91 12 105 2 116 2C116 16 107 26 94 29Z"/>
+          <circle cx="24" cy="150" r="3"/><circle cx="145" cy="105" r="3"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="opening" id="opening" aria-labelledby="opening-title">
+    <div class="opening-frame" aria-hidden="true"></div>
+    <svg class="branch opening-branch left" aria-hidden="true"><use href="#botanical"/></svg>
+    <svg class="branch opening-branch right" aria-hidden="true"><use href="#botanical"/></svg>
+    <div class="opening-copy">
+      <div class="monogram" id="opening-monogram" aria-hidden="true"></div>
+      <svg class="ring-emblem opening-rings" aria-hidden="true"><use href="#wedding-rings"/></svg>
+      <p class="eyebrow" id="opening-title"></p>
+      <p class="opening-names" id="opening-names"></p>
+    </div>
+
+    <div class="envelope-wrap">
+      <button class="envelope" id="envelope" type="button" aria-label="Shaqırıwdı ashıw" aria-controls="invitation">
+        <span class="envelope-back" aria-hidden="true"></span>
+        <span class="envelope-flap" aria-hidden="true"></span>
+        <span class="letter" aria-hidden="true">
+          <span class="letter-flourish">❦</span>
+          <span id="letter-names"></span>
+          <i></i><i></i><i></i>
+        </span>
+        <span class="envelope-pocket" aria-hidden="true"></span>
+        <span class="wax-seal" aria-hidden="true">
+          <span aria-hidden="true">♥</span>
+        </span>
+      </button>
+    </div>
+    <div class="opening-bottom">
+      <p class="opening-date" id="opening-date"></p>
+    </div>
+  </div>
+
+  <main id="invitation" class="invitation" aria-hidden="true" inert>
+    <header class="invitation-header">
+      <a class="header-brand" href="#couple-names" id="header-monogram" aria-label="Bettiń basına"></a>
+      <span class="header-caption">Ómirimizdiń eń gózzal kúni</span>
+      <a class="header-link" href="#wishes-heading">Tilek jollaw <span aria-hidden="true">↗</span></a>
+    </header>
+    <section class="hero-section reveal" aria-labelledby="couple-names">
+      <div class="hero-arch" aria-hidden="true"></div>
+      <figure class="hero-photo hero-photo-left photo-frame">
+        <button class="photo-button" type="button" data-photo="0" aria-label="Júzik hám gúldáste súwretin úlkeytiw"><img src="imasges/wedding%202.jpg" alt="Kelin-kúyewdiń júzik taqqan qolları hám aq gúldáste" width="736" height="1103" decoding="async" fetchpriority="high"></button>
+        <figcaption>Bir ómir birge</figcaption>
+      </figure>
+      <figure class="hero-photo hero-photo-right photo-frame">
+        <button class="photo-button" type="button" data-photo="1" aria-label="Kelin-kúyew súwretin úlkeytiw"><img src="imasges/wedding%203.jpg" alt="Aq gúldáste uslaǵan kelin hám onıń janındaǵı kúyew" width="675" height="1200" decoding="async"></button>
+        <figcaption>Eń gózzal baslanıw</figcaption>
+      </figure>
+      <svg class="branch hero-branch left" aria-hidden="true"><use href="#botanical"/></svg>
+      <svg class="branch hero-branch right" aria-hidden="true"><use href="#botanical"/></svg>
+      <p class="eyebrow" id="intro-kicker"></p>
+      <h1 id="couple-names"></h1>
+      <p class="theme-note" id="theme-note"></p>
+      <div class="ornament" aria-hidden="true"><span></span><svg class="ring-emblem"><use href="#wedding-rings"/></svg><span></span></div>
+      <p class="intro-text" id="intro-text"></p>
+      <div class="hero-date" id="hero-date"></div>
+      <a class="scroll-cue" href="#date-heading"><span>Tolıq maǵlıwmat</span><span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="card date-card reveal" aria-labelledby="date-heading">
+      <p class="section-mark" aria-hidden="true">02 / 06</p>
+      <p class="section-kicker">Kalendarımızdaǵı eń áziz kún</p>
+      <h2 id="date-heading"></h2>
+      <div class="date-story"><div class="date-summary"><div class="date-composition" aria-hidden="true"><span id="date-weekday"></span><strong id="date-day"></strong><span id="date-month"></span></div>
+      <p class="date-display" id="date-display"></p><p class="date-note">Bir kún. Bir wáde. Bir ómir.</p></div><div class="calendar-paper"><table class="wedding-calendar"><caption id="calendar-month"></caption><thead><tr><th scope="col" aria-label="Dúyshembi">Dú</th><th scope="col" aria-label="Siyshembi">Si</th><th scope="col" aria-label="Sárshembi">Sá</th><th scope="col" aria-label="Piyshembi">Pi</th><th scope="col" aria-label="Juma">Ju</th><th scope="col" aria-label="Shembi">Sh</th><th scope="col" aria-label="Ekshembi">Ek</th></tr></thead><tbody id="calendar-days"></tbody></table><p class="calendar-note"><span aria-hidden="true">♡</span> Biziń kúnimiz</p></div></div>
+      <p class="countdown-caption">Baxıtlı kúnimizge shekem</p>
+      <div class="countdown" id="countdown" role="timer" aria-live="off">
+        <div><strong id="days">00</strong><span id="days-label"></span></div>
+        <div><strong id="hours">00</strong><span id="hours-label"></span></div>
+        <div><strong id="minutes">00</strong><span id="minutes-label"></span></div>
+        <div><strong id="seconds">00</strong><span id="seconds-label"></span></div>
+      </div>
+    </section>
+
+
+    <section class="memories reveal" aria-labelledby="memories-heading">
+      <p class="section-kicker">Eki júrek. Bir gúrriń.</p>
+      <h2 id="memories-heading">Muhabbattıń gózzal sátleri</h2>
+      <div class="photo-gallery">
+        <figure class="gallery-photo photo-frame"><button class="photo-button" type="button" data-photo="2" aria-label="Neke júzikleriniń súwretin úlkeytiw"><img src="imasges/wedding%204.jpg" alt="Neke júzikleri hám názik toy kóylegi" width="736" height="1104" loading="lazy" decoding="async"></button><figcaption><span>01</span> Bir wáde</figcaption></figure>
+        <figure class="gallery-photo photo-frame"><button class="photo-button" type="button" data-photo="3" aria-label="Toy portretin úlkeytiw"><img src="imasges/wedding%205.jpg" alt="Klassikalıq interyerdegi kelin-kúyewdiń toy portreti" width="736" height="872" loading="lazy" decoding="async"></button><figcaption><span>02</span> Bir muhabbat</figcaption></figure>
+        <figure class="gallery-photo photo-frame"><button class="photo-button" type="button" data-photo="4" aria-label="Aq-qara toy súwretin úlkeytiw"><img src="imasges/wedding%206.jpg" alt="Uzın fata hám kelin-kúyew súwretlengen aq-qara toy súwreti" width="735" height="1105" loading="lazy" decoding="async"></button><figcaption><span>03</span> Bir ómir</figcaption></figure>
+      </div>
+      <p class="memories-note">Ayırım sátler júrekte máńgi qaladı…</p>
+    </section>
+
+    <section class="card venue-card reveal" aria-labelledby="venue-heading">
+      <p class="section-mark" aria-hidden="true">04 / 06</p>
+      <p class="section-kicker">Umıtılmas kesh mánzili</p>
+      <h2 id="venue-heading"></h2>
+      <svg class="venue-art" viewBox="0 0 360 180" fill="none" aria-hidden="true">
+        <g stroke="currentColor" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 166H340M32 160H328M64 155V78H296V155M56 78H304L180 24L56 78ZM78 70H282L180 34L78 70ZM111 78V57M249 78V57M150 78V41M210 78V41M59 88H301M75 93H285M78 151H282M121 149V112A22 22 0 0 1 165 112V149M195 149V112A22 22 0 0 1 239 112V149M129 149V114A14 14 0 0 1 157 114V149M203 149V114A14 14 0 0 1 231 114V149M143 101V149M217 101V149M129 120H157M203 120H231M173 93V150M187 93V150M80 93V150M91 93V150M269 93V150M280 93V150M114 155H246M108 160H252"/>
+          <circle cx="180" cy="61" r="8"/><path d="M180 53V69M172 61H188M40 157V123M35 157H45M29 128C12 105 30 94 39 106C48 84 66 107 50 123C48 127 43 130 40 132M319 157V123M314 157H324M309 124C293 109 309 92 318 105C332 90 346 111 330 126L319 132"/>
+        </g>
+      </svg>
+      <p class="venue-name" id="venue-name"></p>
+      <p class="venue-address" id="venue-address"></p>
+      <a class="button button-outline" id="map-link" target="_blank" rel="noopener noreferrer"></a>
+      <a class="phone-link" id="phone-link"></a>
+    </section>
+
+<section class="welcome-section reveal" aria-labelledby="welcome-heading">
+      <img class="welcome-photo" src="imasges/wedding%203.jpg" alt="" width="675" height="1200" loading="lazy" decoding="async" aria-hidden="true">
+      <div class="welcome-copy">
+        <p class="section-kicker">Diydarıńız — biz ushın áziz</p>
+        <svg class="ring-emblem" aria-hidden="true"><use href="#wedding-rings"/></svg>
+        <h2 id="welcome-heading">Toyımızda<br>sizdi kútemiz</h2>
+        <p>Qádemlerińiz toyımızǵa kórik,<br>aq pátiyalarıńız baxıtımızǵa qanat bolsın.</p>
+        <span class="welcome-signature" id="welcome-names"></span>
+        <a class="welcome-link" href="#wishes-heading">Bir awız izgi tilek <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="card wishes-card reveal" aria-labelledby="wishes-heading">
+      <p class="section-mark" aria-hidden="true">06 / 06</p>
+      <div class="wishes-copy">
+      <div class="wishes-emblem" aria-hidden="true">♡</div>
+      <p class="section-kicker">Júrekten júrekke</p>
+      <h2 id="wishes-heading"></h2>
+      <p id="wishes-text"></p>
+      </div>
+      <form id="wishes-form">
+        <label for="guest-name" id="name-label"></label>
+        <input id="guest-name" name="guest-name" type="text" autocomplete="name" maxlength="100" required>
+        <label for="guest-wish" id="wish-label"></label>
+        <textarea id="guest-wish" name="guest-wish" rows="5" maxlength="2000" required></textarea>
+        <button class="button button-primary" id="telegram-button" type="submit"></button>
+        <p class="wish-delivery-note">Qutlıqlawıńız Telegram arqalı jollanadı.</p>
+      </form>
+    </section>
+
+    <footer class="reveal">
+      <div class="footer-ornament" aria-hidden="true">♡</div>
+      <p id="footer-names"></p>
+      <p id="footer-date"></p>
+      <p class="footer-note">Sizdi mehir menen kútemiz.</p>
+    </footer>
+  </main>
+  <dialog class="photo-viewer" id="photo-viewer" aria-label="Toy súwretleri">
+    <button class="viewer-close" id="viewer-close" type="button" aria-label="Súwretti jabıw" autofocus>×</button>
+    <button class="viewer-prev" id="viewer-prev" type="button" aria-label="Aldıńǵı súwret">←</button>
+    <figure><img id="viewer-image" alt=""><figcaption id="viewer-caption" aria-live="polite"></figcaption></figure>
+    <button class="viewer-next" id="viewer-next" type="button" aria-label="Keyingi súwret">→</button>
+  </dialog>
+</body>
+</html>
